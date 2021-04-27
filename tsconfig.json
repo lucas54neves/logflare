@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "esnext",
+    "declaration": true,
+    "outDir": "./dist"
+  },
+  "include": [
+    "src/**/*",
+    "./node_modules/@cloudflare/workers-types/index.d.ts",
+    "index.ts"
+  ],
+  "types": ["@cloudflare/workers-types"]
+}
