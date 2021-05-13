@@ -1,4 +1,4 @@
-import { LogDataType } from '../dtos'
+import { LogDataType } from '../dtos/LogDataType'
 import { makeIdLogs } from './makeIdLogs'
 
 export async function registerLogs(data: LogDataType) {
@@ -21,7 +21,7 @@ export async function registerLogs(data: LogDataType) {
       cfRay: data.request.cfRay,
       cfConnectingIp: data.request.cfConnnectingIp,
       cf: data.request.cf,
-      metadata: data.request.metadata,
+      headers: data.request.headers,
       body: data.request.body
     }
 
