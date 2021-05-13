@@ -7,7 +7,7 @@ Pacote do npm para padronização do registro dos logs usando o Logflare.
 ### Importação
 
 ```
-import { registerLogs, buildMetadataFromHeaders } from '@'
+import { registerLogs, buildMetadataFromHeaders } from '@lucas54neves/logflare'
 ```
 
 ### Parâmetros
@@ -60,7 +60,7 @@ const metadata = buildMetadataFromHeaders(someResponse.headers)
 ### Exemplo de uso
 
 ```
-import { registerLogs, buildMetadataFromHeaders } from '@'
+import { registerLogs, buildMetadataFromHeaders } from '@lucas54neves/logflare'
 
 const request = await someFunctionThatReturnsARequest()
 
