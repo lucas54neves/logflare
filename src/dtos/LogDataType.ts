@@ -1,5 +1,5 @@
-import { LogResponseType } from "./LogResponseType"
-import { LogRequestType } from "./LogRequestType"
+import { LogResponseType } from './LogResponseType'
+import { LogRequestType } from './LogRequestType'
 
 export type LogDataType = {
   credentials: {
