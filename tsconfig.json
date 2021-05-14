@@ -1,14 +1,11 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
-    "target": "esnext",
+    "target": "es5",
+    "module": "commonjs",
     "declaration": true,
-    "outDir": "./dist"
+    "outDir": "./lib",
+    "strict": true
   },
-  "include": [
-    "src/**/*",
-    "./node_modules/@cloudflare/workers-types/index.d.ts",
-    "index.ts"
-  ],
-  "types": ["@cloudflare/workers-types"]
+  "include": ["src"],
+  "exclude": ["node_modules", "**/__tests__/*"]
 }
