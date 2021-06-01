@@ -1,6 +1,6 @@
 {
   "name": "@lucas54neves/logflare",
-  "version": "1.0.0",
+  "version": "0.0.13",
   "description": "My logflare npm package",
   "repository": {
     "type": "git",
@@ -9,8 +9,8 @@
   "keywords": [],
   "author": "Lucas Neves <lucas54neves@outlook.com>",
   "license": "MIT",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "prettier": "@lucas54neves/prettier-config",
   "scripts": {
     "build": "tsc",
