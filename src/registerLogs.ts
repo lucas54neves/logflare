@@ -1,14 +1,14 @@
-import { LogDataType } from '../dtos/LogDataType'
-import { makeIdLogs } from './makeIdLogs'
+import { LogDataType } from './dtos'
+import { makeIdLogs } from './utils'
 
-export async function registerLogs(data: LogDataType) {
-  const metadata = {
-    logflare_worker: {
-      worker_id: makeIdLogs(6)
-    }
+export async function registerLogs(data: LogDataType): Promise<Response> {
+  const metadata: any = {}
+
+  metadata.logflare_worker = {
+    worker_id: makeIdLogs(6)
   }
 
-  const headers = {
+  const headers: any = {
     'X-API-KEY': data.credentials.apiKey,
     'Content-Type': 'application/json'
   }
@@ -51,5 +51,5 @@ export async function registerLogs(data: LogDataType) {
     body: JSON.stringify(logflareEventBody)
   }
 
-  await fetch('https://api.logflare.app/logs', init)
+  return fetch('https://api.logflare.app/logs', init)
 }
