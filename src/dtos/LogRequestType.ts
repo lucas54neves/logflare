@@ -2,10 +2,10 @@
 export type LogRequestType = {
   method?: string
   url?: string
-  userAgent?: string
-  host?: string
-  cfRay?: string
-  cfConnnectingIp?: string
+  userAgent?: string | null
+  host?: string | null
+  cfRay?: string | null
+  cfConnectingIp?: string | null
   cf?: string
   headers?: any
   body?: any
