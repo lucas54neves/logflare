@@ -21,21 +21,21 @@ Ao se chamar a função registerLogs, deve-se passar por parâmetro um objeto co
     apiKey: string
   }
   request?: {
-    method: string
-    url: string
-    userAgent: string | null
-    host: string | null
-    cfRay: string | null
-    cfConnnectingIp: string | null
-    cf: IncomingRequestCfProperties
-    metadata: object
+    method?: string
+    url?: string
+    userAgent?: string | null
+    host?: string | null
+    cfRay?: string | null
+    cfConnectingIp?: string | null
+    cf?: string
+    headers?: any
     body?: any
   }
   response?: {
-    metadata: object
-    statusCode: number
+    statusCode?: number
     responseTime?: number
-    body: any
+    body?: any
+    metadata?: any
   }
   message: string
 }
