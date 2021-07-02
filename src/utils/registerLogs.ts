@@ -19,57 +19,15 @@ export async function registerLogs({
   }
 
   if (request) {
-    if (request.url) {
-      metadata['request']['url'] = request.url
-    }
-
-    if (request.userAgent) {
-      metadata['request']['userAgent'] = request.userAgent
-    }
+    metadata['request'] = request
 
     if (request.host) {
-      metadata['request']['host'] = request.host
-
-      headers['User-Agent'] = `Cloudflare Worker via ${request.host}`
-    }
-
-    if (request.cfRay) {
-      metadata['request']['cfRay'] = request.cfRay
-    }
-
-    if (request.cfConnectingIp) {
-      metadata['request']['cfConnectingIp'] = request.cfConnectingIp
-    }
-
-    if (request.cf) {
-      metadata['request']['cf'] = request.cf
-    }
-
-    if (request.headers) {
-      metadata['request']['headers'] = request.headers
-    }
-
-    if (request.body) {
-      metadata['request']['body'] = request.body
+      headers['User-Agent'] = `Cloudflare worker via ${request.host}`
     }
   }
 
   if (response) {
-    if (response.responseTime) {
-      metadata['response']['responseTime'] = response.responseTime
-    }
-
-    if (response.statusCode) {
-      metadata['response']['statusCode'] = response.statusCode
-    }
-
-    if (response.body) {
-      metadata['response']['body'] = response.body
-    }
-
-    if (response.metadata) {
-      metadata['response']['headers'] = response.metadata
-    }
+    metadata['response'] = response
   }
 
   const logflareEventBody = {
