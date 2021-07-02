@@ -3,5 +3,5 @@ export type LogResponseType = {
   statusCode?: number
   responseTime?: number
   body?: any
-  metadata?: any
+  headers?: any
 }
