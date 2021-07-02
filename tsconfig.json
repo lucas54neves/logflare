@@ -2,10 +2,14 @@
   "compilerOptions": {
     "target": "es2015",
     "module": "commonjs",
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "preserveConstEnums": true,
     "declaration": true,
-    "outDir": "./lib",
-    "strict": true
+    "suppressImplicitAnyIndexErrors": true,
+    "outDir": "lib"
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
