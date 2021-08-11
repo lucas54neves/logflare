@@ -1,3 +1,5 @@
+import fetch from 'node-fetch'
+
 import { LogDataType } from '../dtos'
 import { makeIdLogs } from './makeIdLogs'
 
@@ -6,7 +8,7 @@ export async function registerLogs({
   message,
   request,
   response
-}: LogDataType): Promise<Response> {
+}: LogDataType) {
   const metadata: any = {}
 
   metadata.logflare_worker = {
